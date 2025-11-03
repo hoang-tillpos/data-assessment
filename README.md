@@ -1,16 +1,17 @@
-We have made an cloud insights system for multifranchise to sell their pizzas in the following channels:
+We a design cloud insights system for multifranchise to sell their pizzas in the following channels:
 - external onsite POS with an SQL DB  from onsite server
   - data feed agent can be built with onsite server to pull the data from the catering system 
 - external online ordering with webhook notifications triggered from onsite server, and shift totalling APIs from their cloud endpoints
 - external coprporate catering management system with SQL DB, and bulk data exports generated from onsite server
-  - data feed agent can be built with onsite server to pull the data from the catering system 
-
-We are looking for a data engineer to build a data warehouse and build the following dashboard for the business:
+  - data feed agent can be built with onsite server to pull the data from the catering system
+ 
+The software and schemas are all the same, but they are all installed in 1000 physical sites.
 
 As a data engineer, you will design the data ingestion including, schemas, pipelines, environment setup and  testing.
 
 Bonus points: ability to design and refine queries for business needs. 
 
+We are looking for a data engineer to build a data warehouse and build the following dashboard for the business:
 
 - Consumer behaviour: what time of day for each merchant segment where the orders mostly be made?
 - Labour preparation: how busy would each merchant restaurant be?
