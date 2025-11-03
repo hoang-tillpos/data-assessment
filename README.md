@@ -14,7 +14,7 @@ Bonus points: ability to design and refine queries for business needs.
 We are looking for a data engineer to build a data warehouse and build the following dashboard for the business:
 
 - Consumer behaviour: what time of day for each merchant segment where the orders mostly be made?
-- Labour preparation: how busy would each merchant restaurant be?
+- Labour preparation: how busy would each merchant restaurant be at certain point in time?
 - Operations: Reconcile the orders with the previous day/shifts to alert of any cross-system or human errors.
 - Revenue: who are the high value customers, and who are the highly repeated customers?
 - Revenue: what are the products which generate the most revenues?
