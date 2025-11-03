@@ -11,7 +11,7 @@ As a data engineer, you will design the data ingestion including, schemas, pipel
 
 Bonus points: ability to design and refine queries for business needs. 
 
-We are looking for a data engineer to build a data warehouse and build the following dashboard for the business:
+We are looking for a data engineer to build a data warehouse and build the following web-app dashboard for the businesses:
 
 - Consumer behaviour: what time of day for each merchant segment where the orders mostly be made?
 - Labour preparation: how busy would each merchant restaurant be at certain point in time?
