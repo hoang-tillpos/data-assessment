@@ -5,8 +5,7 @@ We a design cloud insights system for multifranchise to sell their pizzas in the
 - external coprporate catering management system with SQL DB, and bulk data exports generated from onsite server
   - data feed agent can be built with onsite server to pull the data from SQL DB  
  
-sample-querries.txt
-Demonstrates example SQL queries or analytical questions to be answered using the integrated data—such as customer behavior trends, sales summaries, or product revenue analysis.
+
 
 Data Files
 online-feed.json
@@ -50,3 +49,6 @@ We are looking for a data engineer to build a data warehouse and build the follo
 - Revenue: what are the products which generate the most revenues?
 - Risk management: could we ensure allergies are not incorrectly considerred, especially for catering? perhaps through live notification of failed allergies
 - Business planning: analyse cumulated revenue trends by product types, time of day, week of year?
+
+sample-querries.txt
+Demonstrates example SQL queries or analytical questions to be answered using the integrated data—such as customer behavior trends, sales summaries, or product revenue analysis.
