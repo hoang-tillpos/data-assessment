@@ -1,9 +1,9 @@
 We a design cloud insights system for multifranchise to sell their pizzas in the following channels:
 - external onsite POS with an SQL DB  from onsite server
-  - data feed agent can be built with onsite server to pull the data from the catering system 
+  - data feed agent can be built with onsite server to pull the data from SQL DB   
 - external online ordering with webhook notifications triggered from onsite server, and shift totalling APIs from their cloud endpoints
 - external coprporate catering management system with SQL DB, and bulk data exports generated from onsite server
-  - data feed agent can be built with onsite server to pull the data from the catering system
+  - data feed agent can be built with onsite server to pull the data from SQL DB  
  
 The software and schemas are all the same, but they are all installed in 1000 physical sites.
 
