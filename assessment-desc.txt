@@ -1,0 +1,17 @@
+We have made an insights system for multifranchise to sell their pizzas in the following channels:
+- external onsite POS with an SQL DB
+- external online ordering with webhook notifications, and shift totalling APIs
+- external coprporate catering management system with bulk data feed 
+
+As a data engineer, you will design the data ingestion including, schemas, pipelines, environment setup and  testing.
+
+Bonus points: ability to design and refine queries for business needs. 
+
+
+Consumer behaviour: what time of day for each merchant segment where the orders mostly be made?
+Labour preparation: how busy would each merchant restaurant be?
+Revenue: who are the high value customers, and who are the highly repeated customers?
+Revenue: what are the products which generate the most revenues?
+Risk management: could we ensure allergies are not incorrectly considerred, especially for catering? perhaps through live notification of 
+Business planning: analyse cumulated revenue trends by product types, time of day, week of year?
+

@@ -1,0 +1,28 @@
+Consumer behaviour: what time of day for each merchant segment where the orders mostly be made?
+- select venue_id, hour, minute, total_sales from consumer_hourly_sales;
+- accuracy of minimum 1 hour to 15 minutes is sufficient (less is better)
+
+Labour preparation: how busy would each merchant restaurant be?
+- select venue_id, hour, minute, total_item_sales from item_hourly_sales;
+- accuracy of minimum 1 hour to 15 minutes is sufficient (less is better)
+
+Revenue: who are the high value customers, and who are the highly repeated customers?
+- select  top 5 venue_id, day_of_week, total_item_sales, customer_id from customers_item_hourly_sales
+    order by total_item_sales desc
+- select  top 5 venue_id, day_of_week, total_order_counts, customer_id from customers_item_hourly_sales
+    order by total_item_sales desc;
+- **note this is for the past week only
+
+
+Revenue: what are the products which generate the most revenues ?
+- select  top 5 venue_id, day_of_week, total_item_sales, product_id from item_sales
+    order by total_item_sales desc
+- **note this is for the past week only
+
+
+Risk management: could we ensure allergies are not incorrectly considerred, especially for catering? perhaps through live notification of 
+- For each new order inserted into the DB, check allergy vs ingredients, and alert if allergy may be caused by the ingredients
+
+Business planning: analyse cumulated revenue trends by 
+    product types, time of day, week of year over the months and years?
+
