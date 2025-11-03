@@ -12,13 +12,19 @@ As a data engineer, you will design the data ingestion including, schemas, pipel
 Bonus points: ability to design and refine queries for business needs. 
 
 
-Consumer behaviour: what time of day for each merchant segment where the orders mostly be made?
-Labour preparation: how busy would each merchant restaurant be?
-Operations: Reconcile the orders with the previous day/shifts to alert of any cross-system or human errors.
-Revenue: who are the high value customers, and who are the highly repeated customers?
-Revenue: what are the products which generate the most revenues?
-Risk management: could we ensure allergies are not incorrectly considerred, especially for catering? perhaps through live notification of 
-Business planning: analyse cumulated revenue trends by product types, time of day, week of year?
+- Consumer behaviour: what time of day for each merchant segment where the orders mostly be made?
+- Labour preparation: how busy would each merchant restaurant be?
+- Operations: Reconcile the orders with the previous day/shifts to alert of any cross-system or human errors.
+- Revenue: who are the high value customers, and who are the highly repeated customers?
+- Revenue: what are the products which generate the most revenues?
+- Risk management: could we ensure allergies are not incorrectly considerred, especially for catering? perhaps through live notification of failed allergies
+- Business planning: analyse cumulated revenue trends by product types, time of day, week of year?
+
+Timeline:
+- 15 minutes: Analyse the data and set up environment and questions on the assessment
+- 45 minutes: onsite technical excercise.
+- 60 minutes: technical assessment  and general interiew questions
+
 
 Tasks in order of importance:
 - Data setup: set up a test SQL DB, test endpoints for data ingestion and testing
