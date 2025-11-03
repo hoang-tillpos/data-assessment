@@ -1,54 +1,112 @@
-We a design cloud insights system for multifranchise to sell their pizzas in the following channels:
-- external onsite POS with an SQL DB  from onsite server
-  - data feed agent can be built with onsite server to pull the data from SQL DB   
-- external online ordering with webhook notifications triggered from onsite server, and shift totalling APIs from their cloud endpoints
-- external coprporate catering management system with SQL DB, and bulk data exports generated from onsite server
-  - data feed agent can be built with onsite server to pull the data from SQL DB  
- 
+# Cloud Insights System for Multi-Franchise Pizza Sales
+
+## Overview
+
+We are designing a **Cloud Insights System** for a multi-franchise business that sells pizzas through the following channels:
+
+- **External Onsite POS** with an SQL database hosted on an onsite server  
+  - A data feed agent can be built with the onsite server to pull data from the SQL database.
+- **External Online Ordering** with webhook notifications triggered from the onsite server  
+  - Includes shift totalling APIs from cloud endpoints.
+- **External Corporate Catering Management System** with an SQL database  
+  - Bulk data exports are generated from the onsite server.
+  - A data feed agent can be built with the onsite server to pull data from the SQL database.
+
+The software, data upload agents, and schemas are identical across all 1,000 physical sites.
+
+As a data engineer, you will design the data ingestion technology, schemas, pipelines, environment setup, and testing.
+
+**Note** it is common to start the design with a number of API endpoints as the entry point for data ingestion. Revise the data schema
+
+**Bonus:** Ability to design and refine queries for business needs.
+
+---
+
+## Data Files
+
+### `online-feed.json`
+Contains raw transaction or order data from online ordering channels.  
+Includes:
+- Order IDs  
+- Timestamps  
+- Item details  
+- Customer data  
+- Real-time webhook feed information  
+
+### `online-sale-summary.json`
+A summarized or aggregated version of `online-feed.json`.  
+May include:
+- Daily or shift-based sales totals  
+- Average order value  
+- Performance metrics for online transactions  
+
+### `pizza-sales-catering-export.csv`
+Represents bulk exported data from the corporate catering management system.  
+Contains:
+- Event IDs  
+- Customer names  
+- Dates  
+- Ordered items and quantities  
+- Total revenue  
+
+### POS (Point-of-Sale) SQL Data
+**Directory:** `pos-sql/`  
+Contains structured CSV files representing different database tables for the onsite POS system.
 
 
-Data Files
-online-feed.json
-Contains raw transaction or order data from online ordering channels. Typically includes order IDs, timestamps, item details, and customer data from real-time webhook feeds.
+---
 
-online-sale-summary.json
-A summarized or aggregated version of online-feed.json. It may include daily or shift-based sales totals, average order values, and performance metrics for online transactions.
+## Timeline
 
-pizza-sales-catering-export.csv
-Represents bulk exported data from the corporate catering management system. The CSV could include catering order details such as event IDs, customer names, dates, ordered items, quantities, and total revenue.
+- **15 minutes:** Analyze data, set up environment, and prepare questions for the assessment.  
+- **45 minutes:** Onsite technical exercise.  
+- **60 minutes:** Technical assessment and general interview questions.
 
-POS (Point-of-Sale) SQL Data
-pos-sql/
-A directory containing structured CSV files representing different database tables for the onsite POS system.
+---
 
+## Tasks (In Order of Importance)
 
-The software, data upload agents, and schemas are all the same, but they are all physically installed in 1000 physical sites.
+1. **Data Setup**  
+   - Set up a test SQL database.  
+   - Create test endpoints for data ingestion and validation.
 
-As a data engineer, you will design the data ingestion technology, schemas, pipelines, environment setup and  testing.
+2. **Data Pipelines**  
+   - Use any tool of choice (e.g., SQL, dbt, pandas, MapReduce) to transform data to meet business requirements.
 
-Bonus points: ability to design and refine queries for business needs. 
+3. **Data Warehouse**  
+   - Design interim schemas for business applications and the data warehouse.
 
-Timeline:
-- 15 minutes: Analyse the data and set up environment and questions on the assessment
-- 45 minutes: onsite technical excercise.
-- 60 minutes: technical assessment  and general interiew questions
+---
 
+## Web-App Dashboard Requirements
 
-Tasks in order of importance:
-- Data setup: set up a test SQL DB, test endpoints for data ingestion and testing
-- Data pipelines: use ANY tool of choice like SQL/dbt/pandas/mapreduce to transform the data to meet the business needs
-- Data Warehouse: design interim schemas for business applications and data warehouse
+The data warehouse will power a web dashboard offering insights for franchise businesses.
 
+### Consumer Behaviour
+- Determine when customers place the most orders by merchant segment and time of day.
 
-We are looking for a data engineer to build a data warehouse and build the following web-app dashboard for the businesses:
+### Labour Preparation
+- Predict restaurant busyness levels based on historical and real-time order data.
 
-- Consumer behaviour: what time of day for each merchant segment where the orders mostly be made?
-- Labour preparation: how busy would each merchant restaurant be at certain point in time?
-- Operations: Reconcile the orders with the previous day/shifts to alert of any cross-system or human errors.
-- Revenue: who are the high value customers, and who are the highly repeated customers?
-- Revenue: what are the products which generate the most revenues?
-- Risk management: could we ensure allergies are not incorrectly considerred, especially for catering? perhaps through live notification of failed allergies
-- Business planning: analyse cumulated revenue trends by product types, time of day, week of year?
+### Operations
+- Reconcile orders across systems and shifts to detect cross-system or human errors.
 
-sample-querries.txt
-Demonstrates example SQL queries or analytical questions to be answered using the integrated data—such as customer behavior trends, sales summaries, or product revenue analysis.
+### Revenue Analysis
+- Identify high-value and repeat customers.  
+- Highlight products generating the most revenue.
+
+### Risk Management
+- Verify accurate handling of allergy information, especially in catering.  
+- Enable live notifications for failed allergy checks.
+
+### Business Planning
+- Analyze cumulative revenue trends by product type, time of day, and week of year.
+
+### `sample-queries.txt`
+Demonstrates example SQL queries or analytical questions for integrated data, such as:
+- Customer behavior trends  
+- Sales summaries  
+- Product revenue analysis  
+
+---
+
