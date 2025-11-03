@@ -31,14 +31,9 @@ Includes:
 - Timestamps  
 - Item details  
 - Customer data  
-- Real-time webhook feed information  
 
 ### `online-sale-summary.json`
 A summarized or aggregated version of `online-feed.json`.  
-May include:
-- Daily or shift-based sales totals  
-- Average order value  
-- Performance metrics for online transactions  
 
 ### `pizza-sales-catering-export.csv`
 Represents bulk exported data from the corporate catering management system.  
